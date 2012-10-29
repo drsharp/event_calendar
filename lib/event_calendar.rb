@@ -7,7 +7,7 @@ module EventCalendar
   module ClassMethods
 
     def has_event_calendar(options={})
-      cattr_accessor :start_at_field, :end_at_field 
+      cattr_accessor :start_at_field, :end_at_field, :display_name_field
       self.start_at_field = ( options[:start_at_field] ||= :start_at).to_s
       self.end_at_field   = ( options[:end_at_field]   ||= :end_at  ).to_s
       self.display_name_field = ( options[:display_name_field] ||= :name  ).to_s
